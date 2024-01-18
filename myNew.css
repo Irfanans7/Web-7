@@ -1,0 +1,32 @@
+body{
+    perspective: 100px;
+}
+section{
+    height: 200px;
+    width:200px;
+    margin: 40px auto;
+    position: relative;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+section:hover{
+    transform: rotateY(180deg);   
+}
+div{
+    height: 200px;
+    width:200px;
+}
+#a{
+    background-color: aqua; 
+    z-index: 1; 
+}
+#b{
+    background-color: brown;
+    transform: rotateY(180deg);
+}
+
+
+#a, #b{
+    position: absolute;
+    backface-visibility: hidden;
+}
